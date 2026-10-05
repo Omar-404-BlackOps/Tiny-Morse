@@ -22,13 +22,18 @@
     font: 40px Monospace;
     width: 75vw;
     max-width: 600px;
-    padding: 10px;
+    padding: 20px;
+    border: none;
+    border-radius: 10px; /* Making the input corners rounded */
   }
 
   button{
+    background: GoldenRod;
+    border: none;
+    border-radius: 20px; /* again .. button corners rounded */
     font: 40px Monospace;
     padding: 10px 20px;
-    margin-top: 2px;
+    margin-bottom: 500px; /*It isn't doing anything but I want to something, like man I am not a web dev */
     cursor: pointer;
 
   }
@@ -92,7 +97,7 @@
     oscillator.connect(volume);
     volume.connect(audio.destination);
 
-    let time = audio.currentTime + 1.0; 
+    let time = audio.currentTime + 0.1; 
     let unit = 0.08;
 
     volume.gain.value = 0;
