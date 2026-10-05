@@ -43,8 +43,26 @@
   <button id="beep">Beep it!</button>
 
 
-  <script>
+  <input id="input" placeholder="Spell ur Words!"/>
+  <p id ="output"></p>
 
+  <button id="beep">Beep it!</button>
+
+
+  <script>
+    const morseCode = {
+      "A":".-", "B": "-...", "C":"-.-.", 
+      "D": "-..", "E": ".", "F": "..-.", 
+      "G": "--.", "H": "....", "I": "..",
+      "J": ".---", "k": "-.-", "L": ".-..",
+      "M": "--", "N": "-.", "O": "---", 
+      "P": ".--.", "Q": "--.-", "R":".-.","S": "...";
+      "T":"-", "U": "..-", "V": "...-", "W": ".--", 
+      "X": "-..-", "Y": "-.--", "Z": "--..",
+      "0": "-----", "1": ".----", "2": "..---", "3": "...--",
+      "4": "....-", "5": ".....", "6": "-....", "7": "--...",
+      "8": "---..", "9": "----."
+    };
     const title = document.querySelector("h1");
     title.onclick = () => (title.textContent = "you clicked it");
   </script>
