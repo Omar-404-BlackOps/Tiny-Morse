@@ -12,11 +12,32 @@
   <style>
     body { background: #000035;
     color: GoldenRod; 
-    font: 60px Monospace; 
+    font: 70px Monospace; 
     text-align: center;
+  }
+
+  input {
+    font: 40px Monospace;
+    width: 75vw;
+    max-width: 600px;
+    padding: 10px;
+  }
+
+  button{
+    font: 40px Monospace;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
 
   }
+
+  #output{
+    min-height: 50px;
+    word-break: break-word;
+  }
+
   </style>
+
   <script>
     const title = document.querySelector("h1");
     title.onclick = () => (title.textContent = "you clicked it");
