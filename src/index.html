@@ -10,7 +10,7 @@
 
 <body>
   <h1>It Works!</h1>
-  /* Simply Using CSS to style the page, and its elements. */
+  <!--Simply Using CSS to style the page, and its elements. -->
   <style>
     body { background: #000035;
     color: GoldenRod; 
@@ -50,7 +50,7 @@
       "A":".-", "B": "-...", "C":"-.-.", 
       "D": "-..", "E": ".", "F": "..-.", 
       "G": "--.", "H": "....", "I": "..",
-      "J": ".---", "k": "-.-", "L": ".-..",
+      "J": ".---", "K": "-.-", "L": ".-..",
       "M": "--", "N": "-.", "O": "---", 
       "P": ".--.", "Q": "--.-", "R":".-.","S": "...",
       "T":"-", "U": "..-", "V": "...-", "W": ".--", 
@@ -71,20 +71,20 @@
     let text = input.value.toUpperCase();
     let result = "";
     
-    for (letter of text){
-      if (letter === ""){
+    for (let letter of text){
+      if (letter === " "){
         result += "/ "; // the space between words is resembled by a slash
       } 
     // If the letter inputted was valid in morseCode dict. then output its morse code and save it into var. result.
-    else if (morseCode[Letter]){
-      result += morseCode[Letter] + " "; 
+    else if (morseCode[letter]){
+      result += morseCode[letter] + " "; 
       }
     }
     output.textContent = result;
   }
 
   //Sound/Beep function
-  beepButton.onClick = function(){
+  beepButton.onclick = function(){
     let audio = new AudioContext();
     let oscillator = audio.createOscillator();
     let volume = audio.createGain();
@@ -95,7 +95,7 @@
     let time = audio.currentTime + 1.0; 
     let unit = 0.08;
 
-    for (symbol of output.textContent){
+    for (let symbol of output.textContent){
       if (symbol === "." || symbol === "-"){
         volume.gain.setValueAtTime(0.3, time);
         
@@ -120,7 +120,7 @@
     oscillator.start(audio.currentTime);
     oscillator.stop(time);
   };
-  
+
 
   
 
