@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--The title and name of the page is set to Morse It! (Tab name simply)-->
   <title>Morse It!</title>
 </head>
 
 
 <body>
   <h1>It Works!</h1>
+  /* Simply Using CSS to style the page, and its elements. */
   <style>
     body { background: #000035;
     color: GoldenRod; 
@@ -39,32 +41,29 @@
 
   <input id="input" placeholder="Spell ur Words!"/>
   <p id ="output"></p>
-
   <button id="beep">Beep it!</button>
 
-
-  <input id="input" placeholder="Spell ur Words!"/>
-  <p id ="output"></p>
-
-  <button id="beep">Beep it!</button>
-
-
+  <!-- This is the JavaScript section where the logic is written/implemented -->
   <script>
+    // Morse code mapping for letters and numbers, like a dictionary
     const morseCode = {
       "A":".-", "B": "-...", "C":"-.-.", 
       "D": "-..", "E": ".", "F": "..-.", 
       "G": "--.", "H": "....", "I": "..",
       "J": ".---", "k": "-.-", "L": ".-..",
       "M": "--", "N": "-.", "O": "---", 
-      "P": ".--.", "Q": "--.-", "R":".-.","S": "...";
+      "P": ".--.", "Q": "--.-", "R":".-.","S": "...",
       "T":"-", "U": "..-", "V": "...-", "W": ".--", 
       "X": "-..-", "Y": "-.--", "Z": "--..",
       "0": "-----", "1": ".----", "2": "..---", "3": "...--",
       "4": "....-", "5": ".....", "6": "-....", "7": "--...",
       "8": "---..", "9": "----."
     };
-    const title = document.querySelector("h1");
-    title.onclick = () => (title.textContent = "you clicked it");
+   // calling the elements from HTML into Javascript using IDs, WoW .. right?
+  const input = document.getElementById("input");
+  const output = document.getElementById("output");
+  const beepButton = document.getElementById("beep");
+
   </script>
 </body>
 
