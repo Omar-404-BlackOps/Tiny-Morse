@@ -64,6 +64,24 @@
   const output = document.getElementById("output");
   const beepButton = document.getElementById("beep");
 
+
+
+
+  input.oninput = function(){
+    let text = input.value.toUpperCase();
+    let result = "";
+    
+    for (letter of text){
+      if (letter === ""){
+        result += "/ "; // the space between words is resembled by a slash
+      } 
+    // If the letter inputted was valid in morseCode dict. then output its morse code and save it into var. result.
+    else if (morseCode[Letter]){
+      result += morseCode[Letter] + " "; 
+      }
+    }
+  }
+
   </script>
 </body>
 
