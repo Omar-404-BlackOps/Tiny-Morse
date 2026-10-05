@@ -9,7 +9,7 @@
 
 
 <body>
-  <h1>It Works!</h1>
+  <h1>Morse It!</h1>
   <!--Simply Using CSS to style the page, and its elements. -->
   <style>
     body { background: #000035;
@@ -28,7 +28,7 @@
   button{
     font: 40px Monospace;
     padding: 10px 20px;
-    margin-top: 20px;
+    margin-top: 2px;
     cursor: pointer;
 
   }
@@ -94,6 +94,9 @@
 
     let time = audio.currentTime + 1.0; 
     let unit = 0.08;
+
+    volume.gain.value = 0;
+    oscillator.frequency.value = 600;
 
     for (let symbol of output.textContent){
       if (symbol === "." || symbol === "-"){
