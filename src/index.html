@@ -83,6 +83,45 @@
     output.textContent = result;
   }
 
+  //Sound/Beep function
+  beepButton.onClick = function(){
+    let audio = new AudioContext();
+    let oscillator = audio.createOscillator();
+    let volume = audio.createGain();
+    
+    oscillator.connect(volume);
+    volume.connect(audio.destination);
+
+    let time = audio.currentTime + 1.0; 
+    let unit = 0.08;
+
+    for (symbol of output.textContent){
+      if (symbol === "." || symbol === "-"){
+        volume.gain.setValueAtTime(0.3, time);
+        
+
+        if (symbol === "."){
+          time += unit; 
+        }
+
+        else{ time += unit *3;}
+      
+      volume.gain.setValueAtTime(0, time);
+      time += unit;
+
+    } else if (symbol === "/"){
+        time += unit * 4; 
+
+    } else {
+      time += unit * 2;
+    }
+  }
+  
+    oscillator.start(audio.currentTime);
+    oscillator.stop(time);
+  };
+  
+
   
 
 
